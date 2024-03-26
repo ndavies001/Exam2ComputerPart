@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# Done: 1. (3 pts)
 #
 #   In this module, we are going to create part of a program that could be used
 #   by a toy store to keep track of prices of various toys.
@@ -13,9 +13,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def get_toy():
+    toy = input("Please enter a toy: ")
+    return toy
+
+print(get_toy())
 
 ###############################################################################
-# TODO: 2. (3 pts)
+# Done: 2. (3 pts)
 #
 #   For this _TODO_, write a function called get_price() that simply prompts
 #   the user for a price like this:
@@ -26,9 +31,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def get_price():
+    price = float(input("Please enter a price: "))
+    return price
+
+print(get_price())
 
 ###############################################################################
-# TODO: 3. (5 pts)
+# Done: 3. (5 pts)
 ##
 #   For this _TODO_, let's first create function called toy_price() that takes
 #   2 parameters:
@@ -43,9 +53,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def toy_price(toy, price):
+    return (toy, price)
 
+print(toy_price("Teddy Bear", 15.99))
 ###############################################################################
-# TODO: 4. (5 pts)
+# Done: 4. (5 pts)
 #
 #   For this _TODO_, write a function called calculate_total_price() that takes
 #   1 parameter:
@@ -61,9 +74,17 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def calculate_total_price(toys):
+    total_price = 0.0
+    for toy, price in toys:
+        total_price += price
+    return total_price
+
+toys = [("Teddy Bear", 15.99), ("LEGO Set", 29.99), ("Doll", 12.49)]
+print(calculate_total_price(toys))
 
 ###############################################################################
-# TODO: 5. (8 pts)
+# Done: 5. (8 pts)
 #
 #   For this _TODO_, write a function called main() that will start everything
 #   off. Make sure you use the functions that you defined above where you can.
@@ -89,3 +110,23 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+    toys = []
+    while True:
+        toy = get_toy()
+        if toy.lower() == "end":
+            break
+        price = get_price()
+        if price is None:
+            break
+        toys.append(toy_price(toy, price))
+    
+    total_cost = calculate_total_price(toys)
+    
+    for toy, price in toys:
+        print(toy, "-", "$" + str(price))
+    
+    print("Total Cost: $" + str(total_cost))
+
+if __name__ == "__main__":
+    main()
