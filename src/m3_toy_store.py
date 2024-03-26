@@ -2,7 +2,7 @@
 # Done: 1. (3 pts)
 #
 #   In this module, we are going to create part of a program that could be used
-#   by a toy store to keep track of prices of various toys.
+#   by atoy store to keep track of prices of various toys.
 #
 #   For this _TODO_, write a function called get_toy() that simply prompts the
 #   user for a toy like this:
