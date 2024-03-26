@@ -5,7 +5,7 @@
 # Done: 1. (5 pts)
 #
 #   In this module, we will be making a tool that allows a user to input the
-#   steps to a recipe. Once the user has entered all the steps, it will print
+#   steps to a reipe. Once the user has entered all the steps, it will print
 #   out each step for the user.
 #
 #   First we need a function that will simply gather a step from the user.
