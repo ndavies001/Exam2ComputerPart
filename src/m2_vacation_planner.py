@@ -15,7 +15,7 @@
 #   vacation type and returns a list of items that the user should probably
 #   bring on that type of vacation.
 #
-#   So, for example, if the function is given the type "beach", the function
+#   So, for example,if the function is given the type "beach", the function
 #   would return a list like this:
 #
 #      ["swimsuit", "towel", "sunscreen"]
